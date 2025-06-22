@@ -40,6 +40,10 @@ export const instance = axios.create({
 export const decksApi = {
     fetchDecks(){
         return instance.get<GetResponse>('/v2/decks')
+    },
+
+    addDeck(name:string){
+        return instance.post<Items>('/v1/decks', {name})
     }
 }
 

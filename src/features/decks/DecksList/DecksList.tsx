@@ -18,7 +18,7 @@ export const DecksList = () => {
             <div>{deck.id}</div>
             <div>
                 <span>Author: </span>
-                {deck.author.name}
+                {deck.name}
             </div>
             <div>
                 <span>Created: </span>
