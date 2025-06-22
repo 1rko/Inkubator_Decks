@@ -17,13 +17,15 @@ export const fetchDecksTC = () => {
 
 export const addDecksTC = (name: string) => {
     return async (dispatch: AppDispatch) => {
-        try {
+        /*try {*/
             const response = await decksApi.addDeck(name)
-            dispatch(addDeckAC(response.data))
-
-        } catch (e) {
+            dispatch(addDeckAC(response.data)) //возвращает промис в случае успешного выполнения
+                                                            //если ошибка, что в форме не произойдет reset(),т.к. promis
+                                                            //будет rejected
+        /*} catch (e) {
+            debugger
             console.log(e)
-        }
+        }*/
     }
 }
 
