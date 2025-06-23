@@ -15,10 +15,10 @@ export const DecksList = () => {
 
     const renderedDecks = decks.map(deck =>
         <li key={deck.id} className={s.item}>
-            <div>{deck.id}</div>
+            <div>{deck.name}</div>
             <div>
                 <span>Author: </span>
-                {deck.name}
+                {deck.author.name}
             </div>
             <div>
                 <span>Created: </span>
